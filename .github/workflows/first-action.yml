@@ -1,0 +1,13 @@
+name: First Workflow
+# when/what will cause this to execute? use "on: " key. define some name/label of event/s that will cause this workflow run
+on: workflow_dispatch
+# what will run? use "jobs: " note: indentation taht is yml-specific
+jobs: 
+  first-job:
+    # what type of runner?
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: Print Goodbye
+        run: echo "Done - bye!"
